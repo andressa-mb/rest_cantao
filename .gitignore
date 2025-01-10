@@ -1,0 +1,45 @@
+README.md
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+cantao_frontend/node_modules/
+cantao_backend/node_modules/
+cantao_frontend/.pnp
+cantao_frontend/.pnp.*
+cantao_frontend/.yarn/*
+cantao_frontend/!.yarn/patches
+cantao_frontend/!.yarn/plugins
+cantao_frontend/!.yarn/releases
+cantao_frontend/!.yarn/versions
+
+# testing
+cantao_frontend/coverage
+
+# next.js
+cantao_frontend/.next/
+cantao_frontend/out/
+
+# production
+cantao_frontend/build
+
+# misc
+cantao_frontend/.DS_Store
+cantao_frontend/*.pem
+
+# debug
+cantao_frontend/npm-debug.log*
+cantao_frontend/yarn-debug.log*
+cantao_frontend/yarn-error.log*
+cantao_frontend/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+cantao_frontend/.env*
+cantao_backend/.env*
+
+# vercel
+.vercel
+
+# typescript
+cantao_frontend/*.tsbuildinfo
+cantao_frontend/next-env.d.ts
