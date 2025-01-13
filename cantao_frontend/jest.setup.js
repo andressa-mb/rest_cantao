@@ -1,3 +1,3 @@
-global.TextEncoder = require("text-encoding").TextEncoder;
-global.TextDecoder = require("text-encoding").TextDecoder;
-require("@testing-library/jest-dom");
+//import "@testing-library/jest-dom";
+import "@testing-library/jest-dom/";
+//require("@testing-library/jest-dom/extend-expect");

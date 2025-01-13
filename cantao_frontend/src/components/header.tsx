@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function Header(){
     return(
@@ -13,9 +13,9 @@ export default function Header(){
                 <nav>
                     <ul id='lista' className="text-center">
 
-                        <li className="inline-block px-5 pt-2 text-lg font-neue text-black hover:text-red-600"><Link to = "/">Início</Link></li>
-                        <li className="inline-block px-5 pt-2 text-lg font-neue text-black hover:text-red-600"><Link to = "/cardapio">Cardápio</Link></li>
-                        <li className="inline-block px-5 pt-2 text-lg font-neue text-black hover:text-red-600"><Link to = "/sobre">Sobre/Localização</Link></li>
+                        <li className="inline-block px-5 pt-2 text-lg font-neue text-black hover:text-red-600"><Link href="/">Início</Link></li>
+                        <li className="inline-block px-5 pt-2 text-lg font-neue text-black hover:text-red-600"><Link href="/cardapio">Cardápio</Link></li>
+                        <li className="inline-block px-5 pt-2 text-lg font-neue text-black hover:text-red-600"><Link href="/sobre">Sobre/Localização</Link></li>
                     </ul>
                 </nav>
             </div>
