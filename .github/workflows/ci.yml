@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 21
       - name: Install dependencies
         working-directory: cantao_frontend
         run: npm install
@@ -39,7 +39,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 21
       - name: Install dependencies
         working-directory: cantao_backend
         run: npm install
