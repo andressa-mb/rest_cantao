@@ -20,17 +20,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-      - name: Check out branch and commit
-        run: |
-          git branch -a
-          git log -n 1
-        
-      - name: Clean npm cache
-        run: npm cache clean --force
-
-      - name: Install Jest locally
-        working-directory: ./cantao_frontend
-        run: npm install jest
 
       - name: Install dependencies
         working-directory: ./cantao_frontend
@@ -43,10 +32,6 @@ jobs:
       - name: Build project
         working-directory: ./cantao_frontend
         run: npm run build
-
-      - name: Debug Jest configuration
-        run: | 
-          npx jest --showConfig
 
   backend:
     name: Backend CI/CD
