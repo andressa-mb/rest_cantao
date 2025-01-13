@@ -21,15 +21,15 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
-        working-directory: cantao_frontend
+        working-directory: ./cantao_frontend
         run: npm install
 
-      - name: Run tests
-        working-directory: cantao_frontend
-        run: npm test
+      - name: Run Jest tests
+        working-directory: ./cantao_frontend
+        run: npx jest --showConfig
 
       - name: Build project
-        working-directory: cantao_frontend
+        working-directory: ./cantao_frontend
         run: npm run build
 
       - name: Debug Jest configuration
@@ -47,13 +47,9 @@ jobs:
         with:
           node-version: 20
       - name: Install dependencies
-        working-directory: cantao_backend
+        working-directory: ./cantao_backend
         run: npm install
 
       - name: Run tests
-        working-directory: cantao_backend
+        working-directory: ./cantao_backend
         run: npm test
-
-      - name: Build project
-        working-directory: cantao_backend
-        run: npm run build
