@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Jest tests
         working-directory: ./cantao_frontend
-        run: npx jest --showConfig
+        run: npm test
 
       - name: Build project
         working-directory: ./cantao_frontend
