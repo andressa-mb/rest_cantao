@@ -10,9 +10,13 @@ export default {
   theme: {
     extend: {
       colors: {
+        fundoCinza: '#f4f4f4',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        Neue: ['Font_Neue', 'sans-serif'],
+      }
     },
   },
   plugins: [],
