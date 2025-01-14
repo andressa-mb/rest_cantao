@@ -16,6 +16,10 @@ export default {
       },
       fontFamily: {
         Neue: ['Font_Neue', 'sans-serif'],
+      },
+      margin: {
+        '25%': '25%',
+        
       }
     },
   },
