@@ -1,10 +1,9 @@
+'use client'
+import Inicio from '@/pages/Inicio';
+import React from 'react';
 
 export default function Home() {
   return (
-    <div>
-      <div>Test</div>
-    
-    </div>
-    
+    <Inicio />
   );
 }
