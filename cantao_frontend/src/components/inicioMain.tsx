@@ -177,19 +177,19 @@ export default function InicioMain() {
                     <h1 className="font-neue text-lg font-semibold">Feedback</h1>
                         <div className="w-1/2">
                             <label htmlFor="nome" className="block font-neue text-lg font-semibold">Nome</label>
-                            <input type="text" placeholder="Digite seu nome" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
+                            <input id="nome" type="text" placeholder="Digite seu nome" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
                         </div>
                         <div className="w-1/2">
-                            <label className="block font-neue text-lg font-semibold">E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
+                            <label htmlFor="email" className="block font-neue text-lg font-semibold">E-mail</label>
+                            <input id="email" type="email" placeholder="Digite seu e-mail" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
                         </div>
                         <div className="w-1/2">
-                            <label className="block font-neue text-lg font-semibold">Escolha uma foto</label>
-                            <input type="file" accept="image/*" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
+                            <label htmlFor="file" className="block font-neue text-lg font-semibold">Escolha uma foto</label>
+                            <input id="file" type="file" accept="image/*" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
                             <p className="font-neue text-sm text-gray-600 mt-1">Apenas imagens (JPG, PNG, etc.)</p>
                         </div>
                         <div className="w-1/2 flex justify-end">
-                            <button className="bg-green-600 font-neue text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600">Postar</button>
+                            <button id="botaoForm" className="bg-green-600 font-neue text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600">Postar</button>
                         </div>
                     </form>
                 </div>
