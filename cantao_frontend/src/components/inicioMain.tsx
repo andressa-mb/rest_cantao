@@ -121,7 +121,7 @@ export default function InicioMain() {
                 </div>
                 <div id="terceiraParte" className="bg-gray-200 m-auto flex pt-4 pb-4 justify-center items-center">
                     <div id="textoParteTres" className="w-96 font-neue font-bold text-lg pr-4">
-                        <p>Reúna-se com os amigos, seja jogo, aniversário ou "sextar" com a galera e uma bebida.</p>
+                        <p>Reúna-se com os amigos, seja jogo, aniversário ou &quot;sextar&quot; com a galera e uma bebida.</p>
                     </div>
                     
                     <div id="imagensParteTres" className="w-96">
