@@ -52,8 +52,8 @@ export default function InicioMain() {
                         <SwiperSlide className="text-center bg-white flex justify-center items-center">
                             <Image 
                             src="/imagens/beer.jpg"
-                            width={700}
-                            height={700}
+                            width={300}
+                            height={500}
                             alt="Foto Cerveja"
                             className="rounded-lg block w-full h-full"
                             />

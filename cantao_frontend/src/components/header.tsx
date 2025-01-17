@@ -1,5 +1,6 @@
 "use client"
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header(){
@@ -8,7 +9,13 @@ export default function Header(){
              {/* Logo*/}
             <div className="bg-fundoCinza">
                 <div className="pt-8 mx-auto w-2/12">
-                    <img src="/logo_cantao.png" alt="Logo do Cantão do Catete" className="h-auto w-full"/>
+                    <Image
+                    src="/logo_cantao.png"
+                    alt="Logo do Cantão do Catete"
+                    width={600}
+                    height={400}
+                    className="h-auto w-full"
+                    />
                 </div>
                 {/* Barra de navegação*/}
                 <nav>
