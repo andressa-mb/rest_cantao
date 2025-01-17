@@ -13,8 +13,8 @@ import "../styles/inicioMainStyles.css";
 
 export default function InicioMain() {
     return(
-        <main className="bg-red-400">
-            <div id="containerPagina" className="mx-[25%] bg-gray-200">
+        <main className="bg-white">
+            <div id="containerPagina" className="mx-[25%]">
                 <div id="primeiraParte" className="h-96 w-96 m-auto pt-4 pb-4">
                     <Swiper
                         spaceBetween={30}
@@ -30,7 +30,7 @@ export default function InicioMain() {
                         modules={[Autoplay, Pagination, Navigation]}
                         className="w-full h-full"
                     >
-                        <SwiperSlide className="text-center bg-white flex justify-center items-center">
+                        <SwiperSlide className="text-center flex justify-center items-center">
                             <Image 
                             src="/imagens/cantao.jpg"
                             width={480}
@@ -40,7 +40,7 @@ export default function InicioMain() {
                             className="rounded-lg block w-full h-full"
                             />
                         </SwiperSlide>
-                        <SwiperSlide className="text-center bg-white flex justify-center items-center">
+                        <SwiperSlide className="text-center flex justify-center items-center">
                             <Image 
                             src="/imagens/contraFilé.png"
                             width={400}
@@ -49,7 +49,7 @@ export default function InicioMain() {
                             className="rounded-lg block w-full h-full"
                             />
                         </SwiperSlide>
-                        <SwiperSlide className="text-center bg-white flex justify-center items-center">
+                        <SwiperSlide className="text-center flex justify-center items-center">
                             <Image 
                             src="/imagens/beer.jpg"
                             width={300}
@@ -61,7 +61,7 @@ export default function InicioMain() {
                     </Swiper>
                 </div>
 
-                <div id="segundaParte1" className="bg-gray-200 flex justify-center gap-4 pt-4 pb-4">
+                <div id="segundaParte1" className="flex justify-center gap-4 pt-4 pb-4">
                     <table className="border border-solid border-black border-collapse">
                         <caption className="font-semibold font-neue text-lg">Pratos do dia</caption>
                         <thead>
@@ -120,7 +120,7 @@ export default function InicioMain() {
                     </div>
                 </div>
 
-                <div id="terceiraParte" className="bg-gray-200 m-auto flex pt-4 pb-4 justify-center items-center">
+                <div id="terceiraParte" className="m-auto flex pt-4 pb-4 justify-center items-center">
                     <div id="imagensParteTres" className="w-96">
                         <Swiper
                         spaceBetween={30}
@@ -171,7 +171,7 @@ export default function InicioMain() {
                     </div>
                 </div>
                
-                <div id="quartaParte" className="bg-gray-200 pt-4 pb-4 w-full m-auto">
+                <div id="quartaParte" className="pt-4 pb-4 w-full m-auto">
                     
                     <form className="flex flex-col items-center space-y-4">
                     <h1 className="font-neue text-lg font-semibold">Feedback</h1>
@@ -194,7 +194,7 @@ export default function InicioMain() {
                     </form>
                 </div>
 
-                <div id="quartaParteResposta" className="bg-gray-200 pt-4 pb-4 w-full m-auto"></div>
+                <div id="quartaParteResposta" className="pt-4 pb-4 w-full m-auto"></div>
             </div>
         </main>
     )

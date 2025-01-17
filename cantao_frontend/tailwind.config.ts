@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        fundoCinza: '#f4f4f4',
+        cinza: '#f4f4f4',
+        vermelho: '#ff0000',
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
