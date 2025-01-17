@@ -112,18 +112,15 @@ export default function InicioMain() {
                     
                         <div className="absolute bottom-2 left-2">
                             <Link href="/cardapio">
-                            <button className="bg-red-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-600">
+                            <button className="bg-green-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600">
                                 Cardápio
                             </button>
                             </Link>
                         </div>
                     </div>
                 </div>
+
                 <div id="terceiraParte" className="bg-gray-200 m-auto flex pt-4 pb-4 justify-center items-center">
-                    <div id="textoParteTres" className="w-96 font-neue font-bold text-lg pr-4">
-                        <p>Reúna-se com os amigos, seja jogo, aniversário ou &quot;sextar&quot; com a galera e uma bebida.</p>
-                    </div>
-                    
                     <div id="imagensParteTres" className="w-96">
                         <Swiper
                         spaceBetween={30}
@@ -168,8 +165,36 @@ export default function InicioMain() {
                             </SwiperSlide>
                         </Swiper>
                     </div>
+
+                    <div id="textoParteTres" className="w-96 font-neue font-bold text-lg text-justify pl-4 pr-4">
+                        <p>Reúna-se com os amigos, seja jogo, aniversário ou &quot;sextar&quot; com a galera e uma bebida.</p>
+                    </div>
                 </div>
                
+                <div id="quartaParte" className="bg-gray-200 pt-4 pb-4 w-full m-auto">
+                    
+                    <form className="flex flex-col items-center space-y-4">
+                    <h1 className="font-neue text-lg font-semibold">Feedback</h1>
+                        <div className="w-1/2">
+                            <label htmlFor="nome" className="block font-neue text-lg font-semibold">Nome</label>
+                            <input type="text" placeholder="Digite seu nome" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
+                        </div>
+                        <div className="w-1/2">
+                            <label className="block font-neue text-lg font-semibold">E-mail</label>
+                            <input type="email" placeholder="Digite seu e-mail" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
+                        </div>
+                        <div className="w-1/2">
+                            <label className="block font-neue text-lg font-semibold">Escolha uma foto</label>
+                            <input type="file" accept="image/*" className="w-full mt-2 p-2 border border-red-400 rounded-md"></input>
+                            <p className="font-neue text-sm text-gray-600 mt-1">Apenas imagens (JPG, PNG, etc.)</p>
+                        </div>
+                        <div className="w-1/2 flex justify-end">
+                            <button className="bg-green-600 font-neue text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600">Postar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="quartaParteResposta" className="bg-gray-200 pt-4 pb-4 w-full m-auto"></div>
             </div>
         </main>
     )
