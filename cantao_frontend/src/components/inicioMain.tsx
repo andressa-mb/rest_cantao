@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -35,6 +35,7 @@ export default function InicioMain() {
                             src="/imagens/cantao.jpg"
                             width={480}
                             height={300}
+                            quality={55}
                             alt="Foto do Cantão"
                             className="rounded-lg block w-full h-full"
                             />
@@ -118,8 +119,55 @@ export default function InicioMain() {
                         </div>
                     </div>
                 </div>
-                <div id="terceiraParte" className="bg-pink-200">
-                    TERCEIRA PARTE
+                <div id="terceiraParte" className="bg-gray-200 m-auto flex pt-4 pb-4 justify-center items-center">
+                    <div id="textoParteTres" className="w-96 font-neue font-bold text-lg pr-4">
+                        <p>Reúna-se com os amigos, seja jogo, aniversário ou "sextar" com a galera e uma bebida.</p>
+                    </div>
+                    
+                    <div id="imagensParteTres" className="w-96">
+                        <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                        }}
+                        pagination={{
+                        clickable: true,
+                        }}
+                        navigation={false}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="w-full h-full"
+                        >
+                            <SwiperSlide>
+                                <Image 
+                                src="/imagens/friendsWithBeer.jpg"
+                                width={400}
+                                height={300}
+                                alt="Amigos brindando"
+                                className="rounded-lg"
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image 
+                                src="/imagens/bebidaNaMesa.jpg"
+                                width={400}
+                                height={300}
+                                alt="Bebida"
+                                className="rounded-lg"
+                                />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Image 
+                                src="/imagens/toastBeer.jpg"
+                                width={400}
+                                height={300}
+                                alt="Brinde"
+                                className="rounded-lg"
+                                />
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
                 </div>
                
             </div>
