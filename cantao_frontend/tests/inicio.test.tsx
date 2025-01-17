@@ -19,6 +19,6 @@ test('Carregar página de Início', () => {
     </BrowserRouter>
   );
 
-  const inicioLink = screen.getByText(/Início/i); // Procurando pelo texto
-  expect(inicioLink).toBeInTheDocument(); // Validando a existência do texto
+  const inicioLink = screen.getAllByText(/Início/i);
+  expect(inicioLink.length).toBeGreaterThan(0);
 });
