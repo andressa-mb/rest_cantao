@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import Inicio from '../src/pages/Inicio';
+import Inicio from '@/app/page';
 
 jest.mock("swiper/react", () => ({
   Swiper: ({ children }: { children: React.ReactNode }) => (
@@ -14,9 +13,7 @@ jest.mock("swiper/react", () => ({
 
 test('Carregar página de Início', () => {
   render(
-    <BrowserRouter>
       <Inicio />
-    </BrowserRouter>
   );
 
   const inicioLink = screen.getAllByText(/Início/i);

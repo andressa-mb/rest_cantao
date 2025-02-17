@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>
+      <body suppressHydrationWarning={true}>
         {children}
       </body>
     </html>
