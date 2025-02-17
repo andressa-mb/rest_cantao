@@ -4,7 +4,7 @@ import { FeedbackModel } from './feedback.model';
 //Criar feedback
 export const createFeedback = async (req: Request, res: Response): Promise<void> => {
   const { nome, email, comentario } = req.body;
-  let img = req.file ? req.file.path: 'public/default.jpg';
+  let img = req.file ? req.file.path.replace(/\\/g, '/') : 'public/default.jpg';
 
   if (!nome || !email || !comentario) {
     res.status(400).json({ message: 'Os campos nome, email e comentários são obrigatórios' });

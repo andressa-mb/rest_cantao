@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -34,9 +34,11 @@ export default function InicioMain() {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [comentario, setComentario] = useState("");
-    const [imagem, setImagem] = useState("");
+    const [imagem, setImagem] = useState<File | string>("");
     const [showModal, setShowModal] = useState(false);
     const [showMessageModal, setShowMessageModal] = useState("");
+
+    const fileInputRef = useRef<HTMLInputElement | null>(null);
 
     useEffect(() => {
         const feedAnterior = async () => {
@@ -50,7 +52,7 @@ export default function InicioMain() {
         feedAnterior();
     }, []);
 
-    const handleSubmit = async (e:any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
          e.preventDefault();
             const formData = new FormData();
             formData.append("nome", nome);
@@ -62,10 +64,6 @@ export default function InicioMain() {
                 await postFeedbacks(formData);                
                 setShowModal(true);
                 setShowMessageModal("Comentário inserido com sucesso.");
-                setNome("");
-                setEmail("");
-                setComentario("");
-                setImagem("");
                 const updatedFeedbacks = await getFeedbacks();
                 setFeedbacks(updatedFeedbacks);
             } catch (err) {
@@ -73,15 +71,26 @@ export default function InicioMain() {
                 setShowModal(true);
                 setShowMessageModal("Erro ao enviar comentário.");
             }
+            setNome("");
+            setEmail("");
+            setComentario("");
+            setImagem("");
+            if (fileInputRef.current) {
+                fileInputRef.current.value = "";
+              }
+            
     };
 
-    const handleImageChange = (e: any) => {
+    const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files.length > 0) {
-            setImagem(e.target.files[0]);
+            //setImagem(e.target.files[0]);
+            const fileImg = e.target.files[0];
+            console.log(fileImg);
+            setImagem(fileImg); 
         }
     }
 
-    const formatarData = (data: string) => {
+    const formatarData = (data: Date):string => {
         const dateObj = new Date(data);
         return dateObj.toLocaleDateString("pt-BR", {
             day: "2-digit",
@@ -265,7 +274,7 @@ export default function InicioMain() {
                         </div>
                         <div className="w-1/2">
                             <label htmlFor="file" className="block font-neue text-lg font-semibold">Escolha uma foto</label>
-                            <input id="file" type="file" accept="image/*" className="w-full mt-2 p-2 border border-green-400 rounded-md" onChange={handleImageChange}></input>
+                            <input id="file" type="file" accept="image/*" className="w-full mt-2 p-2 border border-green-400 rounded-md" ref={fileInputRef} onChange={handleImageChange}></input>
                             <p className="font-neue text-sm text-gray-600 mt-1">Apenas imagens (JPG, PNG, etc.)</p>
                         </div>
                         <div className="w-1/2 flex justify-end">
@@ -278,7 +287,7 @@ export default function InicioMain() {
                     <div className="flex flex-col items-center space-y-4">
                         <h1 className="font-neue text-lg font-semibold">Feedbacks</h1>
                         <div className="w-1/2 space-y-4">
-                        {feedbacks.map((feedback: any) => (
+                        {feedbacks.map((feedback: Feedback) => (
                             <div 
                             key={feedback.id} 
                             className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg shadow-md"
