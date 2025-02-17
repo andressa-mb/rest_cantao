@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug TS com ts-node",
+            "type": "node",
+            "request": "launch",
+            "program": "C:/Users/aulas/Documents/Cantao/cantao/cantao_backend/server.ts",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "cwd": "C:/Users/aulas/Documents/Cantao/cantao/cantao_backend",
+            "sourceMaps": true,
+            "env": {
+                "NODE_ENV": "development"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}

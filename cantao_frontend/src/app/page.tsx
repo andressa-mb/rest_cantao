@@ -1,9 +1,15 @@
 'use client'
-import Inicio from '@/pages/Inicio';
 import React from 'react';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+import InicioMain from '@/components/inicioMain';
 
 export default function Home() {
   return (
-    <Inicio />
+    <div>
+        <Header></Header>
+        <InicioMain></InicioMain>
+        <Footer></Footer>
+    </div>
   );
 }

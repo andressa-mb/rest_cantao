@@ -3,6 +3,10 @@ import type { Config } from "tailwindcss";
 export default {
   content: [
     "./src/**/*.{js,ts,jsx,tsx, mjs}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./styles/**/*.{css}",
   ],
   theme: {
     extend: {
@@ -13,7 +17,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        Neue: ['Font_Neue', 'sans-serif'],
+        neue: ['Font_Neue', 'sans-serif'],
       },
       margin: {
         '25%': '25%',
