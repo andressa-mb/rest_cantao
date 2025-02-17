@@ -83,7 +83,6 @@ export default function InicioMain() {
 
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files.length > 0) {
-            //setImagem(e.target.files[0]);
             const fileImg = e.target.files[0];
             console.log(fileImg);
             setImagem(fileImg); 
@@ -315,7 +314,7 @@ export default function InicioMain() {
                     </div>
                 </div>
                 {/* MODAL */}
-                {showModal && <Modal message={showMessageModal} onClose={() => setShowModal(false)} />}
+                {showModal && <Modal message={showMessageModal} onClose={() => setShowModal(false)}/>}
             </div>
         </main>
     )
