@@ -284,9 +284,11 @@ export default function InicioMain() {
                             className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg shadow-md"
                             >
                             {/* Imagem do usuário */}
-                            <img 
-                                src={feedback.img} 
-                                alt={feedback.nome} 
+                            <Image 
+                                src={feedback.img}
+                                width={200}
+                                height={100}
+                                alt={feedback.nome}
                                 className="w-16 h-16 rounded-full object-cover"
                             />
 
